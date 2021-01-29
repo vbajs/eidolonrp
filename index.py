@@ -4,7 +4,7 @@ import time
 import uuid
 
 print("start")
-bot = commands.Bot(command_prefix="%", self_bot=True)
+bot = commands.Bot(command_prefix="℅", self_bot=True)
 
 @bot.event
 async def on_ready():
@@ -20,7 +20,7 @@ async def on_ready():
 		small_image=("smallimage"),
 		small_text=("smalltext")
 	)
-    
+
 	activity = discord.Activity(
 		application_id=("appid"),
 		name=("name"),
@@ -33,4 +33,4 @@ async def on_ready():
 	await bot.change_presence(activity=activity, status=discord.Status.online)
 	print("Changed rich presence.")
 
-bot.run("token", bot=False)
+bot.run(("token"), bot=False)
