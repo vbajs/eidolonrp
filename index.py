@@ -1,11 +1,10 @@
 from discord.ext import commands
-from os import getenv
 import discord
 import time
 import uuid
 
 print("start")
-bot = commands.Bot(command_prefix="℅", self_bot=True)
+bot = commands.Bot(command_prefix="%", self_bot=True)
 
 @bot.event
 async def on_ready():
@@ -16,25 +15,22 @@ async def on_ready():
 	ms = time.time() * 1000
 	timestamp = dict(start=ms)
 	assets = dict(
-		large_image=getenv("largeimage"),
-		large_text=getenv("largetext"),
-		small_image=getenv("smallimage"),
-		small_text=getenv("smalltext")
+		large_image=("largeimage"),
+		large_text=("largetext"),
+		small_image=("smallimage"),
+		small_text=("smalltext")
 	)
-	partysize = int(getenv("partysize"))
-	partymax = int(getenv("partymax"))
-	party = dict(id=str(uuid.uuid4()), size=[partysize, partymax])
+    
 	activity = discord.Activity(
-		application_id=getenv("appid"),
-		name=getenv("name"),
-		state=getenv("state"),
-		details=getenv("details"),
+		application_id=("appid"),
+		name=("name"),
+		state=("state"),
+		details=("details"),
 		assets=assets,
-		party=party,
 		timestamps=timestamp,
-		type=int(getenv("type"))
+		type=int(("type"))
 	)
 	await bot.change_presence(activity=activity, status=discord.Status.online)
 	print("Changed rich presence.")
 
-bot.run(getenv("token"), bot=False)
+bot.run("token", bot=False)
