@@ -15,14 +15,14 @@ async def on_ready():
 	ms = time.time() * 1000
 	timestamp = dict(start=ms)
 	assets = dict(
-		large_image=("largeimage"),
+		large_image=("largeimageID,NOTKEY"),
 		large_text=("largetext"),
-		small_image=("smallimage"),
+		small_image=("smallimageID,NOTKEY"),
 		small_text=("smalltext")
 	)
 
 	activity = discord.Activity(
-		application_id=("appid"),
+		application_id=int(("appid")),
 		name=("name"),
 		state=("state"),
 		details=("details"),
