@@ -7,7 +7,7 @@ All changes will now have to be done manually on the script directly instead of 
 <tr><td>token</th><td>user account token</td></tr>
 <tr><td>appid</td><td>the application's id to use with its rich presence assets</td></tr>
 <tr><td>name</td><td>header of the rich presence</td></tr>
-<tr><td>url</td><td>twitch stream url (only used when type=1)(I'll also add input for it but commented out)</td></tr>
+<tr><td>url</td><td>twitch stream url (only used when type=1)(The input is there, just remove the #s)</td></tr>
 <tr><td>type</td><td>(int) type of the activity. 0: playing, 1: streaming, 2: listening, 3: watching</td></tr>
 <tr><td>state</td><td>second line of the rich presence</td></tr>
 <tr><td>details</td><td>third line of the rich presence</td></tr>
@@ -21,7 +21,7 @@ All changes will now have to be done manually on the script directly instead of 
 ![pv](pv.png)
 
 
-## Terrmux instructions
+## Termux instructions
 1. Download Termux from F-Droid (you can also download from the play store but that's outdated)
 Optional: download hacker keyboard from playstore so that moving is easier, though, vim has touch support so only use hacker keyboard if you are going to use nano instead
 2. Launch Termux and do `pkg upgrade && pkg install python git vim`
