@@ -28,7 +28,8 @@ async def on_ready():
 		details=("details"),
 		assets=assets,
 		timestamps=timestamp,
-		type=int(("type"))
+		type=int(("type"))#,
+		#url=("url")
 	)
 	await bot.change_presence(activity=activity, status=discord.Status.online)
 	print("Changed rich presence.")
