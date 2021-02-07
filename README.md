@@ -2,6 +2,10 @@
 A rich presence selfbot.
 All changes will now have to be done manually on the script directly instead of using an env file.
 
+#WARNING
+I have been testing this on an alt for 7 weeks now, so far, there has been no termination and the alt account remains standing.
+With that being said, I AM NOT RESPONSIBLE IF YOUR DISCORD ACCOUNT GETS TERMINATED DUE TO THE USAGE OF THIS TOOL!
+
 <table>
 <tr><th>placeholder</th><th>what to replace with</th></tr>
 <tr><td>token</th><td>user account token</td></tr>
